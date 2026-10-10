@@ -582,55 +582,6 @@
         height: 190px;
       }
     }
-    /* ===== 手机端响应式适配 ===== */
-@media (max-width: 768px) {
-  /* 1. 教育经历网格改为单列 */
-  .experience-awards-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* 2. 时间线内容换行 */
-  .timeline-item {
-    grid-template-columns: 32px 1fr;
-    gap: 8px;
-  }
-  .timeline-title {
-    word-break: break-word;
-    overflow-wrap: break-word;
-    line-height: 1.5;
-  }
-  .school-logo {
-    width: 28px;
-    height: 28px;
-  }
-
-  /* 3. 其他可能溢出的网格也改为单列 */
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .profile-photo-wrap {
-    justify-self: start;
-  }
-  .publication-card {
-    grid-template-columns: 1fr;
-  }
-  .publication-cover-wrap {
-    width: 100%;
-    height: auto;
-    max-height: 180px;
-  }
-  .project-grid,
-  .more-project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* 4. 防止全局横向滚动 */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
   </style>
 </head>
 
@@ -639,10 +590,10 @@ html, body {
     <nav class="top-nav">
       <div class="nav-name">Weihe Zhang</div>
       <div class="nav-links">
-        <a href="#publications">Publications</a>
+        <a href="#publications">Selected Publications</a>
         <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#notes">Notes</a>
+        <a href="#experience">Education & Experiences</a>
+        <a href="#notes">Posts & Notes</a>
       </div>
     </nav>
 
@@ -782,47 +733,48 @@ html, body {
       <div class="project-grid">
         <div class="project-card">
           <div>
-            <div class="project-title">Design of a Programmable Ultrafast Electric Pulse Generation Circuit</div>
+            <div class="project-title">Design of a Programmable Ultrafast Electric Pulse Generation Circuit<br>可程控超快电脉冲产生电路的设计</div>
             <div class="project-desc">
               Bachelor's thesis<br>In progress
             </div>
           </div>
-          <!-- <div class="mini-links">
-            <a class="mini-link" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="mini-link" href="#" target="_blank" rel="noopener noreferrer">Article</a>
-          </div>-->
+          <div class="mini-links">
+            <a class="mini-link" href="https://rstar.ustc.edu.cn/front/researchProjectDetail?id=jw_graduation_thesis:wybs:16606" target="_blank" rel="noopener noreferrer">See Project Details (USTC Login Required)</a>
+            <!--<a class="mini-link" href="#" target="_blank" rel="noopener noreferrer">Article</a>-->
+          </div>
         </div>
 
         <div class="project-card">
           <div>
-            <div class="project-title">Design of Large Dynamic Range Ultrafast Pulse Multi-channel Attenuation Front-End Circuitry for Laser Fusion Diagnostic Systems </div>
+            <div class="project-title">Design of Large Dynamic Range Ultrafast Pulse Multi-channel Attenuation Front-End Circuitry for Laser Fusion Diagnostic Systems<br>面向激光聚变诊断的大量程超快脉冲多路衰减前端电路设计</div>
             <div class="project-desc">
               2026 Spring Undergraduate Research Program, Key Project (USTC)<br>In progress
             </div>
           </div>
-          <!--<div class="mini-links">
-            <a class="mini-link" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="mini-link" href="#" target="_blank" rel="noopener noreferrer">Article</a>
-          </div>-->
+          <div class="mini-links">
+            <a class="mini-link" href="https://rstar.ustc.edu.cn/front/researchProjectDetail?id=jw_research_plan:wybs:3666" target="_blank" rel="noopener noreferrer">See Project Details (USTC Login Required)</a>
+            <!--<a class="mini-link" href="#" target="_blank" rel="noopener noreferrer">Article</a>-->
+          </div>
         </div>
 
         <div class="project-card">
           <div>
-            <div class="project-title">Implementation of Excretion Processing Automatically for Old Person on Bed</div>
+            <div class="project-title">Implementation of Excretion Processing Automatically for Old Person on Bed<br>卧床老人二便自动处理机器人的设计实现</div>
             <div class="project-desc">
               2025 Spring College Students' Innovative Entrepreneurial Training Plan Program, National Level<br>Defended at USTC Department of Automation, with a score of 93/100 (top 50%)
             </div>
           </div>
-          <div class="mini-links">
+          <!--<div class="mini-links">
             <a class="mini-link" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
+          </div>-->
         </div>
       </div>
 
-      <div class="more-block">
+      <!--<div class="more-block">
         <details>
           <summary>See more projects</summary>
           <div class="more-project-grid">
+
             <div class="project-card">
               <div>
                 <div class="project-title">Additional Project One</div>
@@ -846,25 +798,14 @@ html, body {
                 <a class="mini-link" href="#" target="_blank" rel="noopener noreferrer">Link</a>
               </div>
             </div>
-
-            <div class="project-card">
-              <div>
-                <div class="project-title">Additional Project Three</div>
-                <div class="project-desc">
-                  Add a short description of this project.
-                </div>
-              </div>
-              <div class="mini-links">
-                <a class="mini-link" href="#" target="_blank" rel="noopener noreferrer">Link</a>
-              </div>
-            </div>
+          
           </div>
         </details>
-      </div>
+      </div>-->
     </section>
 
     <section class="card" id="experience">
-      <h2>Education & Experience</h2>
+      <h2>Education & Experiences</h2>
 
       <div class="experience-awards-grid">
         <div class="info-panel">
@@ -884,22 +825,6 @@ html, body {
                 <div class="timeline-title">High School Attached to Northeast Normal University, <br>High School Diploma</div>
               </div>
             </div>
-
-            <!-- <div class="timeline-item">
-              <img class="school-logo" src="assets/institution-placeholder.svg" alt="Neutral institution placeholder" width="128" height="128">
-              <div>
-                <div class="timeline-time">2024–Present</div>
-                <div class="timeline-title">University Name, Department, Graduate Student / Researcher, Advisor: Advisor Name</div>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <img class="school-logo" src="assets/institution-placeholder.svg" alt="Neutral institution placeholder" width="128" height="128">
-              <div>
-                <div class="timeline-time">2025–Present</div>
-                <div class="timeline-title">Visiting Student / Research Intern, Host Institution, Host Group</div>
-              </div>
-            </div>-->
           </div>
         </div>
 
