@@ -625,6 +625,7 @@
 </head>
 
 <body>
+  <audio id="myAudio" src="A Dream More Scarlet than Red.mp3"></audio>
   <main class="container">
     <nav class="top-nav">
       <div class="nav-name">Weihe Zhang</div>
@@ -633,6 +634,7 @@
         <a href="#projects">Projects</a>
         <a href="#experience">Education & Experiences</a>
         <a href="#notes">Posts & Notes</a>
+        <button id="playButton">Play <i>A Dream More Scarlet than Red</i></button>
       </div>
     </nav>
 
@@ -647,10 +649,11 @@
         </p>
 
         <p class="about-line">
-          I am an undergraduate student in the Department of Modern Physics at USTC. My research interests include circuit design and embedded systems development (Arduino). I am currently working with XXX on specialized circuit design.
+          I am an undergraduate student in the Department of Modern Physics at USTC. My research interests include circuit design and embedded systems development (Arduino). I am currently working with <a href="https://faculty.ustc.edu.cn/fengchangqing/en/index.htm" target="_blank" rel="noopener noreferrer">Prof. Changqing Feng</a> on specialized circuit design.
         </p>
 
         <div class="links">
+          <a class="pill-link" href="#" target="_blank">Workplace: </a>
           <a class="pill-link" href="mailto:zhangweihe@mail.ustc.edu.cn" target="_blank">Institutional Email: zhangweihe@mail.ustc.edu.cn</a>
           <a class="pill-link" href="mailto:2741556868@qq.com" target="_blank">Tencent QQ Mail: 2741556868@qq.com</a>
           <a class="pill-link" href="https://github.com/lifelessrat2" target="_blank">GitHub: lifelessrat2</a>
@@ -872,7 +875,7 @@
           <div class="award-list">
             <span class="award-chip">2026.6--Outstanding Student Club Leader of USTC Tactical Regiment (2025–2026 Academic Year)</span>
             <span class="award-chip">2026.5--Outstanding Communist Youth League Member, USTC (2025–2026 Academic Year)</span>
-            <a class="pill-link" href="https://young.ustc.edu.cn/2026/0401/c15063a725056/page.psp" target="_blank">2026.3--Outstanding Team & Individual, Winter "Return to Hometown" Social Practice Program</a>
+            <a class="pill-link" href="https://young.ustc.edu.cn/2026/0401/c15063a725056/page.psp" target="_blank">2026.3--Outstanding Team & Individual, Winter "Return to Hometown" Social Practice Program (USTC Login Required)</a>
             <span class="award-chip">2025.11--Silver Award, USTC Outstanding Student Scholarship (2024–2025 Academic Year)</span>
             <span class="award-chip">2025.5--Outstanding Communist Youth League Member, USTC (2024–2025 Academic Year)</span>
             <span class="award-chip">2024.12--Silver Award, USTC Outstanding Student Scholarship (2023–2024 Academic Year)</span>
@@ -969,5 +972,22 @@
   <footer class="footer">
     © 2026 Weihe Zhang. Built with GitHub Pages.
   </footer>
+  <script>
+    // 获取音频和按钮
+    const audio = document.getElementById('myAudio');
+    const btn = document.getElementById('playButton');
+
+    // 点击按钮事件
+    btn.addEventListener('click', function() {
+  if (audio.paused) {
+    audio.play();
+    btn.innerHTML = "Pause <em>A Dream More Scarlet than Red</em>";
+  } else {
+    audio.pause();
+    btn.innerHTML = "Play <em>A Dream More Scarlet than Red</em>";
+  }
+})
+
+  </script>
 </body>
 </html>
