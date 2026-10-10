@@ -582,6 +582,55 @@
         height: 190px;
       }
     }
+    /* ===== 手机端响应式适配 ===== */
+@media (max-width: 768px) {
+  /* 1. 教育经历网格改为单列 */
+  .experience-awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* 2. 时间线内容换行 */
+  .timeline-item {
+    grid-template-columns: 32px 1fr;
+    gap: 8px;
+  }
+  .timeline-title {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+  }
+  .school-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* 3. 其他可能溢出的网格也改为单列 */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .profile-photo-wrap {
+    justify-self: start;
+  }
+  .publication-card {
+    grid-template-columns: 1fr;
+  }
+  .publication-cover-wrap {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+  }
+  .project-grid,
+  .more-project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 4. 防止全局横向滚动 */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
   </style>
 </head>
 
@@ -652,7 +701,7 @@
           <span class="tag">Keyword 2</span>
           <span class="tag">Keyword 3</span>-->
         </div>
-      </div>
+      <!--</div>-->
 
       <!--<div class="publication-card">
         <div class="publication-cover-wrap">
@@ -949,7 +998,7 @@
             </ul>
           </details>
         </div>-->
-      </div>
+      <!--</div>-->
     </section>
   </main>
 
