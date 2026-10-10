@@ -271,7 +271,8 @@
 
     .publication-card {
       display: grid;
-      grid-template-columns: 250px 1fr;
+      /*grid-template-columns: 250px 1fr;*/
+      grid-template-columns: 1fr;
       gap: 22px;
       align-items: center;
       padding: 12px 0;
@@ -382,6 +383,7 @@
       /*grid-template-columns: 1.35fr 1fr;*/
       grid-template-columns: 1fr;
       gap: 14px;
+      margin-top: 10px;
     }
 
     .timeline {
@@ -393,8 +395,9 @@
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 38px 1fr;
-      gap: 11px;
+      /*grid-template-columns: 38px 1fr;*/
+      grid-template-columns: 1fr;
+      gap: 6px;
       align-items: start;
     }
 
@@ -421,6 +424,8 @@
       line-height: 1.5;
       color: var(--text);
       font-weight: 620;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
 
     .award-list {
@@ -440,6 +445,11 @@
       color: #343840;
       font-size: 14px;
       line-height: 1.45;
+      /* 防御性修复 */
+      max-width: 100%;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
     }
 
     .note-grid {
@@ -552,6 +562,35 @@
       .publication-cover-wrap {
         width: 100%;
         height: 210px;
+      }
+
+      /* 窄屏修复：让长文本胶囊/链接换行、长 URL 可断行，防止向右溢出 */
+      .pill-link,
+      .mini-link {
+        white-space: normal;
+        text-align: center;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
+      .award-chip {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
+      .award-list > *,
+      .links > *,
+      .mini-links > * {
+        min-width: 0;
+        max-width: 100%;
+      }
+
+      .info-panel {
+        min-width: 0;
+      }
+
+      .timeline-item > div {
+        min-width: 0;
       }
     }
 
